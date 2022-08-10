@@ -26,7 +26,13 @@ SECRET_KEY = 'django-insecure-l51om6alep7m)3m!ojw(27j=!1z8b@_)i7@2a-+xg1&uk-kikp
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',  # for localhost (REACT Default)
+]
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8000',  # for localhost (REACT Default)
+]
 
 
 # Application definition
@@ -40,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
